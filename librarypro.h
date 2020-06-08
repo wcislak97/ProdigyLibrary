@@ -2,6 +2,10 @@
 #define LIBRARYPRO_H
 
 #include <QMainWindow>
+#include "registration.h"
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LibraryPro; }
@@ -16,9 +20,15 @@ public:
     ~LibraryPro();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_pushButton_login_clicked();
+
+    void on_pushButton_register_clicked();
 
 private:
     Ui::LibraryPro *ui;
+    Registration *registration;
+    QSqlDatabase mydb;
 };
+
 #endif // LIBRARYPRO_H

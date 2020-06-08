@@ -26,13 +26,16 @@
       <x>190</x>
       <y>10</y>
       <width>390</width>
-      <height>211</height>
+      <height>256</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <property name="topMargin">
+      <number>25</number>
+     </property>
      <item row="0" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_welcome">
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);
@@ -42,22 +45,22 @@ font: 75 20pt &quot;Calibri&quot;;</string>
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="text">
-          <string>Welcome to</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_welcome2">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(84, 130, 53);
-font: 75 20pt &quot;Calibri&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Prodigy Library</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;span style=&quot; color:#548235;&quot;&gt;Prodigy Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
       </layout>
+     </item>
+     <item row="4" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label_welcome3">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 75 16pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Log In to Your Account</string>
+       </property>
+      </widget>
      </item>
      <item row="5" column="1">
       <layout class="QGridLayout" name="gridLayout_lineEdit_login" columnstretch="0">
@@ -320,7 +323,7 @@ color: rgb(255, 255, 255);</string>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_registry">
+          <widget class="QPushButton" name="pushButton_register">
            <property name="palette">
             <palette>
              <active>
@@ -536,14 +539,10 @@ color: rgb(255, 255, 255);</string>
        </item>
       </layout>
      </item>
-     <item row="4" column="1" alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="label_welcome3">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-font: 75 16pt &quot;Calibri&quot;;</string>
-       </property>
+     <item row="6" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label_login">
        <property name="text">
-        <string>Log In to Your Account</string>
+        <string/>
        </property>
       </widget>
      </item>

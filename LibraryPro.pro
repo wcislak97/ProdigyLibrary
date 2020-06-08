@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,13 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    librarypro.cpp
+    librarypro.cpp \
+    registration.cpp
 
 HEADERS += \
-    librarypro.h
+    librarypro.h \
+    registration.h
 
 FORMS += \
-    librarypro.ui
+    librarypro.ui \
+    registration.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
