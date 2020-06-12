@@ -16,15 +16,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    home.cpp \
     main.cpp \
     librarypro.cpp \
     registration.cpp
 
 HEADERS += \
+    home.h \
     librarypro.h \
     registration.h
 
 FORMS += \
+    home.ui \
     librarypro.ui \
     registration.ui
 

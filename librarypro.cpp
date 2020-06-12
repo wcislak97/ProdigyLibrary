@@ -72,7 +72,12 @@ void LibraryPro::on_pushButton_login_clicked()
             count++;
         }
         if(count==1)
+        {
             ui->label_login->setText("Logged in correctly.");
+            hide();
+            home = new Home(this);
+            home->show();
+        }
         if(count>1)
             ui->label_login->setText("Something went wrong...");
         if(count<1)

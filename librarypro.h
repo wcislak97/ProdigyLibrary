@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "registration.h"
+#include "home.h"
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
@@ -28,6 +29,7 @@ private slots:
 private:
     Ui::LibraryPro *ui;
     Registration *registration;
+    Home *home;
     QSqlDatabase mydb;
 };
 
