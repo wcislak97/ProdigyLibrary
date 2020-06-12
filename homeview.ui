@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Home</class>
- <widget class="QMainWindow" name="Home">
+ <class>HomeView</class>
+ <widget class="QWidget" name="HomeView">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,26 +11,28 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Home</string>
+   <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(38, 38, 38);</string>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>781</width>
+     <height>581</height>
+    </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
       <property name="sizeConstraint">
        <enum>QLayout::SetFixedSize</enum>
       </property>
       <property name="rightMargin">
        <number>400</number>
       </property>
-      <item alignment="Qt::AlignLeft">
-       <widget class="QPushButton" name="pushButton_search_a_book">
+      <item>
+       <widget class="QPushButton" name="pushButton_home_search_a_book">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -59,7 +61,7 @@ color: rgb(255, 255, 255);</string>
        </widget>
       </item>
       <item alignment="Qt::AlignLeft">
-       <widget class="QPushButton" name="pushButton_your_account">
+       <widget class="QPushButton" name="pushButton_home_your_account">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -101,9 +103,9 @@ font: 75 8pt &quot;Calibri&quot;;</string>
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
-       <widget class="QLineEdit" name="lineEdit_title">
+       <widget class="QLineEdit" name="lineEdit_home_title">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -120,7 +122,7 @@ color: rgb(74, 74, 74);</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_first_name">
+       <widget class="QLineEdit" name="lineEdit_home_first_name">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -137,7 +139,7 @@ color: rgb(74, 74, 74);</string>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_last_name">
+       <widget class="QLineEdit" name="lineEdit_home_last_name">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -163,13 +165,13 @@ color: rgb(74, 74, 74);</string>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
+      <widget class="QWidget" name="scrollAreaWidgetContents_3">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>776</width>
-         <height>209</height>
+         <width>777</width>
+         <height>241</height>
         </rect>
        </property>
       </widget>
@@ -177,17 +179,6 @@ color: rgb(74, 74, 74);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

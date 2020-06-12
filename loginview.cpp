@@ -69,3 +69,13 @@ void LoginView::on_pushButton_login_clicked()
 
 }
 
+void LoginView::on_pushButton_homeTemp_clicked() {
+    qDebug() << "homeTemp clicked";
+
+    QObject *p = this;
+    p = p->parent();
+
+    LibraryPro *lp = (LibraryPro*) p;
+    lp->showHomeView();
+}
+

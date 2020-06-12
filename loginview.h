@@ -21,6 +21,8 @@ private slots:
 
     void on_pushButton_register_clicked();
 
+    void on_pushButton_homeTemp_clicked();
+
 private:
     Ui::LoginView *ui;
 };

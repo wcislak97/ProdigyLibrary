@@ -17,7 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     dbconnection.cpp \
-    home.cpp \
+    homeview.cpp \
     loginview.cpp \
     main.cpp \
     librarypro.cpp \
@@ -25,13 +25,13 @@ SOURCES += \
 
 HEADERS += \
     dbconnection.h \
-    home.h \
+    homeview.h \
     librarypro.h \
     loginview.h \
     registerview.h
 
 FORMS += \
-    home.ui \
+    homeview.ui \
     librarypro.ui \
     loginview.ui \
     registerview.ui

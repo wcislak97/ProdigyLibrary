@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "registration.h"
-#include "home.h"
+#include "homeview.h"
 #include "registerview.h"
 #include "loginview.h"
 #include <QtSql>
@@ -27,15 +27,19 @@ public:
 
     void showRegisterView();
 
+    void showHomeView();
+
     QSqlDatabase getDB();
 
     ~LibraryPro();
 
 private:
     Ui::LibraryPro *ui;
-    Home *home;
-    RegisterView *registerWidget;
+
+    RegisterView *registerView;
     LoginView *loginView;
+    HomeView *homeView;
+
     QSqlDatabase mydb;
 };
 

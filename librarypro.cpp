@@ -1,5 +1,7 @@
 #include "librarypro.h"
 #include "ui_librarypro.h"
+#include "loginview.h"
+#include "registerview.h"
 #include <fstream>
 #include <QMessageBox>
 #include <QSqlDatabase>
@@ -35,8 +37,15 @@ void LibraryPro::showLoginView()
 
 void LibraryPro::showRegisterView()
 {
-    registerWidget = new RegisterView();
-    this->setCentralWidget(registerWidget);
+    registerView = new RegisterView();
+    this->setCentralWidget(registerView);
 }
+
+void LibraryPro::showHomeView()
+{
+    homeView = new HomeView();
+    this->setCentralWidget(homeView);
+}
+
 
 
