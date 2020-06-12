@@ -16,20 +16,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dbconnection.cpp \
     home.cpp \
+    loginview.cpp \
     main.cpp \
     librarypro.cpp \
-    registration.cpp
+    registerview.cpp
 
 HEADERS += \
+    dbconnection.h \
     home.h \
     librarypro.h \
-    registration.h
+    loginview.h \
+    registerview.h
 
 FORMS += \
     home.ui \
     librarypro.ui \
-    registration.ui
+    loginview.ui \
+    registerview.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

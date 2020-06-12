@@ -4,12 +4,16 @@
 #include <QMainWindow>
 #include "registration.h"
 #include "home.h"
+#include "registerview.h"
+#include "loginview.h"
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class LibraryPro; }
+namespace Ui {
+    class LibraryPro;
+}
 QT_END_NAMESPACE
 
 class LibraryPro : public QMainWindow
@@ -18,51 +22,23 @@ class LibraryPro : public QMainWindow
 
 public:
     LibraryPro(QWidget *parent = nullptr);
+
+    void showLoginView();
+
+    void showRegisterView();
+
+    QSqlDatabase getDB();
+
     ~LibraryPro();
-
-private slots:
-
-    void on_pushButton_login_clicked();
-
-    void on_pushButton_register_clicked();
 
 private:
     Ui::LibraryPro *ui;
-    Registration *registration;
-<<<<<<< HEAD
     Home *home;
+    RegisterView *registerWidget;
+    LoginView *loginView;
     QSqlDatabase mydb;
-=======
->>>>>>> 8c8f32a6f1c348c91bc7e8f6a6d008568d7db3d4
 };
 
 #endif // LIBRARYPRO_H
 
 
-class DBConnection{
-public:
-    QSqlDatabase mydb;
-
-
-    void connClose(){
-            mydb.close();
-            mydb.removeDatabase(QSqlDatabase::defaultConnection);
-
-    }
-
-
-    bool connOpen()
-    {
-            mydb = QSqlDatabase::addDatabase("QSQLITE");
-            mydb.setDatabaseName("./prodigy.db");
-
-            if (!mydb.open())
-            {
-               qDebug() << "Error: connection with database fail";
-            }
-            else
-            {
-               qDebug() << "Database: connection ok";
-            }
-        }
-};

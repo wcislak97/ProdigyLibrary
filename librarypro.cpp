@@ -13,6 +13,7 @@ LibraryPro::LibraryPro(QWidget *parent)
 {
     ui->setupUi(this);
 
+    showLoginView();
 
 }
 
@@ -22,82 +23,20 @@ LibraryPro::~LibraryPro()
     delete ui;
 }
 
-std::vector<std::string> readRecordFromFile(std::string file_name, std::string search_term)
-{
-    std::vector<std::string> record;
-    std::ifstream file;
-    file.open(file_name);
-
-    bool found_record = false;
-
-    std::string field_one;
-
-    while(getline(file, field_one, ',') && !found_record)
-    {
-        if(field_one == search_term)
-        {
-            found_record = true;
-            record.push_back(field_one);
-        }
-    }
-    return record;
+QSqlDatabase LibraryPro::getDB() {
+    return mydb;
 }
 
-void LibraryPro::on_pushButton_login_clicked()
+void LibraryPro::showLoginView()
 {
-    QString pesel = ui->lineEdit_pesel->text();
-    QString password = ui->lineEdit_password->text();
-
-    DBConnection conn;
-
-
-    if(!conn.connOpen())
-    {
-        qDebug()<<"Failed to open database!";
-        //return;
-    }
-
-
-
-    QSqlQuery query;
-
-    query.prepare("select * from users where pesel='"+pesel+"' and password='"+password+"'");
-    if(query.exec())
-    {
-        int count=0;
-        while(query.next())
-        {
-            count++;
-        }
-<<<<<<< HEAD
-        if(count==1)
-        {
-            ui->label_login->setText("Logged in correctly.");
-            hide();
-            home = new Home(this);
-            home->show();
-        }
-=======
-        if(count==1){
-            ui->label_login->setText("Logged in correctly.");
-
-            }
->>>>>>> 8c8f32a6f1c348c91bc7e8f6a6d008568d7db3d4
-        if(count>1)
-            ui->label_login->setText("Something went wrong...");
-        if(count<1)
-            ui->label_login->setText("Incorrect PESEL or password.");
-    }
-    conn.connClose();
-
+    loginView = new LoginView();
+    this->setCentralWidget(loginView);
 }
 
-void LibraryPro::on_pushButton_register_clicked()
+void LibraryPro::showRegisterView()
 {
-    DBConnection conn;
-    conn.connClose();
-    hide();
-    registration = new Registration(this);
-    registration->show();
+    registerWidget = new RegisterView();
+    this->setCentralWidget(registerWidget);
 }
+
 
