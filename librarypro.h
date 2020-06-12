@@ -28,7 +28,35 @@ private slots:
 private:
     Ui::LibraryPro *ui;
     Registration *registration;
-    QSqlDatabase mydb;
 };
 
 #endif // LIBRARYPRO_H
+
+
+class DBConnection{
+public:
+    QSqlDatabase mydb;
+
+
+    void connClose(){
+            mydb.close();
+            mydb.removeDatabase(QSqlDatabase::defaultConnection);
+
+    }
+
+
+    bool connOpen()
+    {
+            mydb = QSqlDatabase::addDatabase("QSQLITE");
+            mydb.setDatabaseName("./prodigy.db");
+
+            if (!mydb.open())
+            {
+               qDebug() << "Error: connection with database fail";
+            }
+            else
+            {
+               qDebug() << "Database: connection ok";
+            }
+        }
+};

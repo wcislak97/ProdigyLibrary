@@ -13,18 +13,9 @@ LibraryPro::LibraryPro(QWidget *parent)
 {
     ui->setupUi(this);
 
-    mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/wcisl/Documents/Qt_Projects/LibraryPro/LibraryPro/prodigy.db");
 
-    if (!mydb.open())
-    {
-       qDebug() << "Error: connection with database fail";
-    }
-    else
-    {
-       qDebug() << "Database: connection ok";
-    }
 }
+
 
 LibraryPro::~LibraryPro()
 {
@@ -57,33 +48,46 @@ void LibraryPro::on_pushButton_login_clicked()
     QString pesel = ui->lineEdit_pesel->text();
     QString password = ui->lineEdit_password->text();
 
-    if(!mydb.isOpen())
+    DBConnection conn;
+
+
+    if(!conn.connOpen())
     {
         qDebug()<<"Failed to open database!";
         //return;
     }
 
+
+
     QSqlQuery query;
-    if(query.exec("select * from users where pesel='"+pesel+"' and password='"+password+"'"))
+
+    query.prepare("select * from users where pesel='"+pesel+"' and password='"+password+"'");
+    if(query.exec())
     {
         int count=0;
         while(query.next())
         {
             count++;
         }
-        if(count==1)
+        if(count==1){
             ui->label_login->setText("Logged in correctly.");
+
+            }
         if(count>1)
             ui->label_login->setText("Something went wrong...");
         if(count<1)
             ui->label_login->setText("Incorrect PESEL or password.");
     }
+    conn.connClose();
 
 }
 
 void LibraryPro::on_pushButton_register_clicked()
 {
+    DBConnection conn;
+    conn.connClose();
     hide();
     registration = new Registration(this);
     registration->show();
 }
+
