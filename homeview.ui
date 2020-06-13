@@ -56,7 +56,7 @@
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>Search a book</string>
+         <string>Home page</string>
         </property>
        </widget>
       </item>
@@ -155,10 +155,18 @@ color: rgb(74, 74, 74);</string>
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="actual_search_button">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(84, 130, 53);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QTableWidget" name="tableWidget"/>
     </item>
     <item>
      <widget class="QScrollArea" name="scrollArea">
@@ -171,9 +179,135 @@ color: rgb(74, 74, 74);</string>
          <x>0</x>
          <y>0</y>
          <width>777</width>
-         <height>241</height>
+         <height>491</height>
         </rect>
        </property>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>781</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: white;
+     border: 2px outset black;</string>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="midLineWidth">
+         <number>1</number>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>230</y>
+          <width>779</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 75 8pt &quot;Calibri&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Book a book that you want to read</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_bookID">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>330</y>
+          <width>226</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(74, 74, 74);</string>
+        </property>
+        <property name="placeholderText">
+         <string>BookID</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bookIt_button">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>330</y>
+          <width>80</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(84, 130, 53);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Book it!</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_pesel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>250</y>
+          <width>226</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(74, 74, 74);</string>
+        </property>
+        <property name="placeholderText">
+         <string>PESEL</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_password">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>290</y>
+          <width>227</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(74, 74, 74);</string>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>

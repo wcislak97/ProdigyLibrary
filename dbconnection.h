@@ -1,4 +1,10 @@
 #include <QtSql>
+#include <QMessageBox>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
+
 #ifndef DBCONNECTION_H
 #define DBCONNECTION_H
 

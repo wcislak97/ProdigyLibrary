@@ -21,6 +21,8 @@ class LibraryPro : public QMainWindow
     Q_OBJECT
 
 public:
+
+
     LibraryPro(QWidget *parent = nullptr);
 
     void showLoginView();
@@ -33,6 +35,8 @@ public:
 
     ~LibraryPro();
 
+
+
 private:
     Ui::LibraryPro *ui;
 
@@ -40,7 +44,8 @@ private:
     LoginView *loginView;
     HomeView *homeView;
 
-    QSqlDatabase mydb;
+
+
 };
 
 #endif // LIBRARYPRO_H

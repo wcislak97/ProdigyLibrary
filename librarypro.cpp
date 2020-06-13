@@ -25,9 +25,6 @@ LibraryPro::~LibraryPro()
     delete ui;
 }
 
-QSqlDatabase LibraryPro::getDB() {
-    return mydb;
-}
 
 void LibraryPro::showLoginView()
 {
