@@ -1,3 +1,5 @@
+
+#include "loginview.h"
 #ifndef HOMEVIEW_H
 #define HOMEVIEW_H
 
@@ -18,6 +20,8 @@ public:
 private slots:
     void on_pushButton_home_search_a_book_clicked();
     void on_pushButton_home_your_account_clicked();
+    void on_actual_search_button_clicked();
+    void on_bookIt_button_clicked();
 
 private:
     Ui::HomeView *ui;

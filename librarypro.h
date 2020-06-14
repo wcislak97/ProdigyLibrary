@@ -40,7 +40,6 @@ private:
     LoginView *loginView;
     HomeView *homeView;
 
-    QSqlDatabase mydb;
 };
 
 #endif // LIBRARYPRO_H
