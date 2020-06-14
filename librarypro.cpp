@@ -44,5 +44,11 @@ void LibraryPro::showHomeView()
     this->setCentralWidget(homeView);
 }
 
+void LibraryPro::showAccountView()
+{
+    accountView = new accountview();
+    this->setCentralWidget(accountView);
+
+}
 
 

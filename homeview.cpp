@@ -3,6 +3,7 @@
 #include "dbconnection.h"
 #include "loginview.h"
 #include "ui_loginview.h"
+#include "librarypro.h"
 #include <QtDebug>
 
 HomeView::HomeView(QWidget *parent) :
@@ -25,9 +26,13 @@ void HomeView::on_pushButton_home_search_a_book_clicked()
 void HomeView::on_pushButton_home_your_account_clicked()
 {
     qDebug() << "Your Account";
+
+    QObject *p = this;
+    p = p->parent();
+
+    LibraryPro *lp = (LibraryPro*) p;
+    lp->showAccountView();
 }
-
-
 
 void HomeView::on_actual_search_button_clicked()
 {
@@ -61,7 +66,6 @@ void HomeView::on_actual_search_button_clicked()
     ui->tableView->setModel(modal);
     conn.connClose();
 }
-
 
 void HomeView::on_bookIt_button_clicked()
 {

@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    accountview.cpp \
     dbconnection.cpp \
     homeview.cpp \
     loginview.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
     registerview.cpp
 
 HEADERS += \
+    accountview.h \
     dbconnection.h \
     homeview.h \
     librarypro.h \
@@ -31,6 +33,7 @@ HEADERS += \
     registerview.h
 
 FORMS += \
+    accountview.ui \
     homeview.ui \
     librarypro.ui \
     loginview.ui \

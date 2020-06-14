@@ -61,4 +61,3 @@ void RegisterView::on_pushButton_register_clicked()
     qDebug()<<qry.exec();
     conn.connClose();
 }
-

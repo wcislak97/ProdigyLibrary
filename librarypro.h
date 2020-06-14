@@ -6,6 +6,7 @@
 #include "homeview.h"
 #include "registerview.h"
 #include "loginview.h"
+#include "accountview.h"
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
@@ -28,6 +29,7 @@ public:
     void showRegisterView();
 
     void showHomeView();
+    void showAccountView();
 
     QSqlDatabase getDB();
 
@@ -39,6 +41,7 @@ private:
     RegisterView *registerView;
     LoginView *loginView;
     HomeView *homeView;
+    accountview *accountView;
 
 };
 

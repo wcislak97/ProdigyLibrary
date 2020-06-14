@@ -1,8 +1,6 @@
-
-#include "loginview.h"
 #ifndef HOMEVIEW_H
 #define HOMEVIEW_H
-
+#include "loginview.h"
 #include <QWidget>
 
 namespace Ui {
