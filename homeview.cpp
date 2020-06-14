@@ -115,7 +115,28 @@ conn.connClose();
 }
 conn.connClose();
 
-if(count==2)
+if(count==2){
+    int ifExists;
+    conn.connOpen();
+    QSqlQuery qry1;
+
+    qry1.prepare("SELECT COUNT(*) FROM reservedBooks WHERE BookID=:bookid and PESEL=:pesel");
+    qry1.bindValue(":bookid",bookid);
+    qry1.bindValue(":pesel",pesel);
+    qry1.exec();
+    while (qry1.next())
+    {
+        ifExists = qry1.value(0).toInt();
+        qDebug()<<"ifExist value= "<<ifExists;
+        if (ifExists==0) count++;
+        else qDebug()<<"You already have this book!";
+    }
+    conn.connClose();
+
+}
+conn.connClose();
+
+if(count==3)
 {   conn.connOpen();
     QSqlQuery qry2;
 
@@ -134,7 +155,7 @@ if(count==2)
 }
 conn.connClose();
 
-if(count==3)
+if(count==4)
 {
 conn.connOpen();
 QSqlQuery qry1;
@@ -153,7 +174,7 @@ count++;
 }
 conn.connClose();
 
-if(count==4){
+if(count==5){
     conn.connOpen();
     QSqlQuery qry3;
     quant--;
