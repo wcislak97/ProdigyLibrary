@@ -57,6 +57,12 @@ void LoginView::on_pushButton_login_clicked()
                 hide();
                 //home = new Home(this);
                 //home->show();
+                qDebug() << "Logged in";
+                QObject *p = this;
+                p = p->parent();
+
+                LibraryPro *lp = (LibraryPro*) p;
+                lp->showHomeView();
             }
             if(count==1)
                 ui->label_login->setText("Logged in correctly.");
@@ -67,15 +73,5 @@ void LoginView::on_pushButton_login_clicked()
         }
         conn.connClose();
 
-}
-
-void LoginView::on_pushButton_homeTemp_clicked() {
-    qDebug() << "homeTemp clicked";
-
-    QObject *p = this;
-    p = p->parent();
-
-    LibraryPro *lp = (LibraryPro*) p;
-    lp->showHomeView();
 }
 

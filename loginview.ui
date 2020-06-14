@@ -19,28 +19,21 @@
      <property name="topMargin">
       <number>25</number>
      </property>
-     <item row="0" column="2">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_welcome">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: 75 20pt &quot;Calibri&quot;;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;span style=&quot; color:#548235;&quot;&gt;Prodigy Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
      <item row="6" column="2" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="label_login">
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label_welcome3">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 75 16pt &quot;Calibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Log In to Your Account</string>
        </property>
       </widget>
      </item>
