@@ -50,6 +50,18 @@ font: 75 16pt &quot;Calibri&quot;;</string>
        </property>
        <item row="0" column="0">
         <widget class="QLineEdit" name="lineEdit_pesel">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
@@ -64,6 +76,18 @@ color: rgb(0, 0, 0);</string>
        </item>
        <item row="1" column="0">
         <widget class="QLineEdit" name="lineEdit_password">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
