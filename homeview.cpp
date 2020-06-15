@@ -198,3 +198,8 @@ conn.connClose();
 
 
 }
+
+void HomeView::on_pushButton_logout_clicked()
+{
+
+}

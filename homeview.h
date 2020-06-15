@@ -21,6 +21,8 @@ private slots:
     void on_actual_search_button_clicked();
     void on_bookIt_button_clicked();
 
+    void on_pushButton_logout_clicked();
+
 private:
     Ui::HomeView *ui;
 };

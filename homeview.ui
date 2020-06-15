@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>727</width>
-    <height>455</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,11 +18,14 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>7</number>
+       </property>
        <property name="sizeConstraint">
         <enum>QLayout::SetFixedSize</enum>
        </property>
        <property name="rightMargin">
-        <number>400</number>
+        <number>290</number>
        </property>
        <item>
         <widget class="QPushButton" name="pushButton_home_search_a_book">
@@ -53,7 +56,7 @@ color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignLeft">
+       <item>
         <widget class="QPushButton" name="pushButton_home_your_account">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -82,13 +85,42 @@ color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_logout">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(84, 130, 53);
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Logout</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
-     <item>
+     <item alignment="Qt::AlignLeft">
       <widget class="QLabel" name="label">
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-font: 75 8pt &quot;Calibri&quot;;</string>
+font: 75 10pt &quot;Calibri&quot;;</string>
        </property>
        <property name="text">
         <string>Search by using at least one of the fields below and choose the book that interested in...</string>
@@ -171,8 +203,8 @@ color: rgb(255, 255, 255);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>705</width>
-          <height>347</height>
+          <width>774</width>
+          <height>468</height>
          </rect>
         </property>
         <widget class="QTableView" name="tableView">
@@ -180,8 +212,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>711</width>
-           <height>151</height>
+           <width>776</width>
+           <height>260</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -195,8 +227,8 @@ color: rgb(255, 255, 255);</string>
         <widget class="QLineEdit" name="lineEdit_bookID">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>160</y>
+           <x>0</x>
+           <y>270</y>
            <width>202</width>
            <height>30</height>
           </rect>
@@ -218,8 +250,8 @@ color: rgb(74, 74, 74);</string>
         <widget class="QLineEdit" name="lineEdit_pesel">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>200</y>
+           <x>0</x>
+           <y>310</y>
            <width>202</width>
            <height>30</height>
           </rect>
@@ -241,8 +273,8 @@ color: rgb(74, 74, 74);</string>
         <widget class="QLineEdit" name="lineEdit_password">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>240</y>
+           <x>0</x>
+           <y>350</y>
            <width>202</width>
            <height>30</height>
           </rect>
@@ -264,8 +296,8 @@ color: rgb(74, 74, 74);</string>
         <widget class="QPushButton" name="bookIt_button">
          <property name="geometry">
           <rect>
-           <x>230</x>
-           <y>240</y>
+           <x>210</x>
+           <y>270</y>
            <width>80</width>
            <height>31</height>
           </rect>

@@ -49,8 +49,8 @@ void adminHomePage::on_bookIt_button_3_clicked()
 {
     int count=0;
     int quant=0;
-    QString pesel=ui->lineEdit_pesel_3->text();
-    QString bookid=ui->lineEdit_bookID_3->text();
+    QString pesel=ui->lineEdit_pesel_4->text();
+    QString bookid=ui->lineEdit_bookID_4->text();
 
     DBConnection conn;
     conn.connOpen();
@@ -206,4 +206,9 @@ void adminHomePage::on_actual_search_button_clicked()
     qDebug()<<modal->rowCount();
     ui->tableView_3->setModel(modal);  //only difference is here tableView->tableView_3
     conn.connClose();
+}
+
+void adminHomePage::on_pushButton_logout_clicked()
+{
+
 }
