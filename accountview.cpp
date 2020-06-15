@@ -87,7 +87,6 @@ conn.connClose();
 
 }
 
-
 void accountview::on_pushButton_see_books_clicked()
 {
     int count=0;

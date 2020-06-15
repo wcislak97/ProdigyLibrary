@@ -17,26 +17,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     accountview.cpp \
+    adminaccountview.cpp \
+    adminhomepage.cpp \
     dbconnection.cpp \
     homeview.cpp \
     loginview.cpp \
     main.cpp \
     librarypro.cpp \
+    managebooksview.cpp \
     registerview.cpp
 
 HEADERS += \
     accountview.h \
+    adminaccountview.h \
+    adminhomepage.h \
     dbconnection.h \
     homeview.h \
     librarypro.h \
     loginview.h \
+    managebooksview.h \
     registerview.h
 
 FORMS += \
     accountview.ui \
+    adminaccountview.ui \
+    adminhomepage.ui \
     homeview.ui \
     librarypro.ui \
     loginview.ui \
+    managebooksview.ui \
     registerview.ui
 
 # Default rules for deployment.

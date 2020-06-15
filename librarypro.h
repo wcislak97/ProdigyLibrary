@@ -2,11 +2,13 @@
 #define LIBRARYPRO_H
 
 #include <QMainWindow>
-#include "registration.h"
 #include "homeview.h"
 #include "registerview.h"
 #include "loginview.h"
 #include "accountview.h"
+#include "adminhomepage.h"
+#include "managebooksview.h"
+#include "adminaccountview.h"
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
@@ -29,7 +31,14 @@ public:
     void showRegisterView();
 
     void showHomeView();
+
     void showAccountView();
+
+    void showAdminHomePage();
+
+    void showManageBooks();
+
+    void showAdminAccountView();
 
     QSqlDatabase getDB();
 
@@ -38,10 +47,13 @@ public:
 private:
     Ui::LibraryPro *ui;
 
+    adminHomePage *adminhomepage;
     RegisterView *registerView;
     LoginView *loginView;
     HomeView *homeView;
     accountview *accountView;
+    manageBooksView *managebooksview;
+    adminaccountview *adminAccountView;
 
 };
 

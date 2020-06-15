@@ -2,6 +2,8 @@
 #include "ui_librarypro.h"
 #include "loginview.h"
 #include "registerview.h"
+#include "adminhomepage.h"
+#include "adminaccountview.h"
 #include <fstream>
 #include <QMessageBox>
 #include <QSqlDatabase>
@@ -51,4 +53,20 @@ void LibraryPro::showAccountView()
 
 }
 
+void LibraryPro::showAdminHomePage()
+{
+    adminhomepage = new adminHomePage();
+    this->setCentralWidget(adminhomepage);
+}
 
+void LibraryPro::showManageBooks()
+{
+    managebooksview = new manageBooksView();
+    this->setCentralWidget(managebooksview);
+}
+
+void LibraryPro::showAdminAccountView()
+{
+    adminAccountView = new adminaccountview();
+    this->setCentralWidget(adminAccountView);
+}
