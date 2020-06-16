@@ -220,6 +220,9 @@ color: rgb(74, 74, 74);</string>
                <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(74, 74, 74);</string>
               </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
               <property name="placeholderText">
                <string>Password</string>
               </property>
@@ -323,6 +326,9 @@ color: rgb(74, 74, 74);</string>
              <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(74, 74, 74);</string>
             </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
             <property name="placeholderText">
              <string>New Password</string>
             </property>
@@ -340,6 +346,9 @@ color: rgb(74, 74, 74);</string>
              <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(74, 74, 74);</string>
             </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
             <property name="placeholderText">
              <string>Confirm New Password</string>
             </property>
@@ -356,6 +365,9 @@ color: rgb(74, 74, 74);</string>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(74, 74, 74);</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
             </property>
             <property name="placeholderText">
              <string>Old Password</string>
