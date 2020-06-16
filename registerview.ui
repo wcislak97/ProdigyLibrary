@@ -60,7 +60,7 @@
              </property>
             </spacer>
            </item>
-           <item>
+           <item alignment="Qt::AlignHCenter">
             <widget class="QLabel" name="label_welcome">
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
