@@ -295,23 +295,6 @@ color: rgb(255, 255, 255);</string>
            <number>100</number>
           </property>
           <item>
-           <widget class="QLineEdit" name="lineEdit_new_pass">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(74, 74, 74);</string>
-            </property>
-            <property name="placeholderText">
-             <string>New Password</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QLineEdit" name="lineEdit_pesel_p">
             <property name="minimumSize">
              <size>
@@ -325,6 +308,23 @@ color: rgb(74, 74, 74);</string>
             </property>
             <property name="placeholderText">
              <string>Login</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_new_pass">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(74, 74, 74);</string>
+            </property>
+            <property name="placeholderText">
+             <string>New Password</string>
             </property>
            </widget>
           </item>
