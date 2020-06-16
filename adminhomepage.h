@@ -29,6 +29,8 @@ private slots:
 
     void on_pushButton_logout_clicked();
 
+    void on_bookIt_button_4_clicked();
+
 private:
     Ui::adminHomePage *ui;
 };

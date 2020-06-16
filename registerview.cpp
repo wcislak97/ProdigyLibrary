@@ -18,6 +18,7 @@ RegisterView::~RegisterView()
     delete ui;
 }
 
+//method taking us back to loginView
 void RegisterView::on_pushButton_back_clicked()
 {
     QObject *p = this;
@@ -27,8 +28,11 @@ void RegisterView::on_pushButton_back_clicked()
     lp->showLoginView();
 }
 
+//method that allows user to register
+//there can be no duplicates in the database for same PESEL as it is set as users table PRIMARY KEY
 void RegisterView::on_pushButton_register_clicked()
 {
+    //variables declaration and opening up connection with DB
     DBConnection conn;
 
    QString pesel = ui->lineEdit_pesel->text();
@@ -47,6 +51,8 @@ void RegisterView::on_pushButton_register_clicked()
         //return;
     }
     QSqlQuery qry;
+
+    //SQL Query to insert all the values given by user to the DB
     qry.prepare("INSERT INTO users(PESEL, password, firstName, lastName, phoneNo, streetNo, city, country) "
                 "values(:pesel,:password,:first_name,:last_name,:phone_number,:street_and_number,:city,:country)");
     qry.bindValue(":pesel",pesel);
@@ -60,4 +66,5 @@ void RegisterView::on_pushButton_register_clicked()
 
     qDebug()<<qry.exec();
     conn.connClose();
+    //closing connection with DB
 }
